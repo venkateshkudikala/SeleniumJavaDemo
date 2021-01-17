@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 import com.demowebshop.pages.RegisterPage;
 import com.demowebshop.testBase.TestBase;
-import com.relevantcodes.extentreports.LogStatus;
 
 public class Register extends TestBase{
 

@@ -3,7 +3,6 @@ package com.demowebshop.testBase;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.channels.FileLockInterruptionException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Properties;
@@ -105,7 +104,7 @@ public class TestBase {
 		properties();
 		System.out.println("Running Browser name");
 		invokeBrowser("Chrome");
-		driver.get(prop.getProperty("url"));
+		driver.get("http://demowebshop.tricentis.com/");
 		driver.manage().window().maximize();
 		
 	}
@@ -117,7 +116,7 @@ public class TestBase {
 				System.out.println("Browser chrome");
 			   WebDriverManager.chromedriver().setup();
 			   ChromeOptions options = new ChromeOptions();
-			   options.addArguments("--incognito");
+			//   options.addArguments("--incognito");
 			    new DesiredCapabilities();
 				cap = DesiredCapabilities.chrome();
 			   cap.setCapability(ChromeOptions.CAPABILITY, options);
