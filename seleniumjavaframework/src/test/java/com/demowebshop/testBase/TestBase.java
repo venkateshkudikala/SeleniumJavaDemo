@@ -116,7 +116,8 @@ public class TestBase {
 				System.out.println("Browser chrome");
 			   WebDriverManager.chromedriver().setup();
 			   ChromeOptions options = new ChromeOptions();
-			//   options.addArguments("--incognito");
+			   options.addArguments("--incognito");
+			   options.addArguments("--headless");
 			    new DesiredCapabilities();
 				cap = DesiredCapabilities.chrome();
 			   cap.setCapability(ChromeOptions.CAPABILITY, options);
